@@ -96,9 +96,8 @@ if __name__ == "__main__":
                 if ch.isupper():
                     result += translateMap["capital"]
                     result += translateMap[ch.lower()]
-                elif ch == ".":
+                elif ch == "." and numberPrev == True:
                     result += translateMap["decimal"]
-                    result += translateMap[ch]
                 elif ch.isnumeric() and numberPrev == False:
                     numberPrev = True
                     result += translateMap["number"]
